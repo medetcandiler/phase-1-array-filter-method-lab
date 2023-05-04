@@ -12,14 +12,13 @@ function fuzzyMatch(drivers, letter) {
 
   for (let i of drivers) {
     const driver = i;
-    // Check if the driver name matches the query exactly, starts with the query, or has the query as a prefix
+
     if (driver.toLowerCase() === letter || driver.startsWith(letter) || driver.indexOf(letter) === 0) {
-      // If a match is found, add the driver name to the matchingDrivers array
+
       matchingDrivers.push(driver);
     }
   }
 
-  // Return the array of matching driver names
   return matchingDrivers;
 }
 
